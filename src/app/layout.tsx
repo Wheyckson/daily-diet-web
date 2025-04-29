@@ -4,7 +4,10 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
 
-const nunitoSans = Nunito_Sans();
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  preload: true,
+});
 
 export const metadata: Metadata = {
   title: "Daily Diet",
