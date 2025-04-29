@@ -149,7 +149,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        `${process.env.API_URL}/meals/percent-diet/${userId.id}`
+        `${process.env.NEXT_PUBLIC_API_URL}/meals/percent-diet/${userId.id}`
       );
       const result = await response.json();
 
@@ -180,7 +180,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        `${process.env.API_URL}/meals/user/${userId.id}`
+        `${process.env.NEXT_PUBLIC_API_URL}/meals/user/${userId.id}`
       );
       const data = await response.json();
       const meals = data.meals;
@@ -232,7 +232,7 @@ export default function Home() {
     if (!userId) return;
 
     try {
-      await fetch(`${process.env.API_URL}/meals/${userId.id}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/meals/${userId.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -58,7 +58,7 @@ export default function RegisterUser() {
     };
 
     try {
-      const response = await fetch(`${process.env.API_URL}/users/register`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

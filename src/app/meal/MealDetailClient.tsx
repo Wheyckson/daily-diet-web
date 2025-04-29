@@ -78,7 +78,7 @@ export default function MealDetailClient() {
     if (!mealId) return;
 
     try {
-      const response = await fetch(`${process.env.API_URL}/meals/${mealId}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/meals/${mealId}`);
       const result = await response.json();
 
       setMeal(result);
@@ -115,7 +115,7 @@ export default function MealDetailClient() {
     console.log("Dados para salvar:", payload);
 
     try {
-      await fetch(`${process.env.API_URL}/meals/${mealId}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/meals/${mealId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -137,7 +137,7 @@ export default function MealDetailClient() {
     if (!mealId) return;
 
     try {
-      await fetch(`${process.env.API_URL}/meals/${mealId}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/meals/${mealId}`, {
         method: "DELETE",
       });
 

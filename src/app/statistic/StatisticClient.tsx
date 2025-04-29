@@ -39,7 +39,7 @@ export default function StatisticClient() {
 
       try {
         const response = await fetch(
-          `${process.env.API_URL}/meals/metrics/${userId.id}`
+          `${process.env.NEXT_PUBLIC_API_URL}/meals/metrics/${userId.id}`
         );
         const result = await response.json();
 
