@@ -2,7 +2,10 @@ import React, { forwardRef } from "react";
 import InputMask from "react-input-mask";
 import { Input } from "@/components/ui/input"; // Shadcn Input
 
-const MaskedInput = forwardRef(
+interface MaskedInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  mask: string;
+}
+const MaskedInput = forwardRef<HTMLInputElement, MaskedInputProps>(
   ({ mask, value, onChange, placeholder, ...rest }, ref) => {
     return (
       <InputMask
