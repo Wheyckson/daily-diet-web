@@ -75,10 +75,15 @@ export default function MealDetailClient() {
   });
 
   const fetchMeal = async () => {
+    console.log(mealId);
+
     if (!mealId) return;
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/meals/${mealId}`);
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/meals/${mealId}`
+      );
+
       const result = await response.json();
 
       setMeal(result);
